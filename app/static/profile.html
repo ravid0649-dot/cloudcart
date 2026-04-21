@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudCart | Profile</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="/" class="brand">CloudCart</a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/static/products.html">Products</a>
+        <a href="/static/cart.html">Cart</a>
+        <a href="/static/orders.html">Orders</a>
+        <a class="active" href="/static/profile.html">Profile</a>
+        <a href="/static/admin.html">Admin</a>
+      </nav>
+      <div class="row">
+        <span class="auth-chip" id="authChip"></span>
+        <button class="btn danger" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="layout-2" style="margin-top: 20px;">
+      <div class="panel">
+        <h2>My Profile</h2>
+        <input id="fullNameInput" placeholder="Full name" />
+        <input id="phoneInput" placeholder="Phone number" />
+        <textarea id="addressInput" placeholder="Default shipping address"></textarea>
+        <button class="btn primary" id="saveProfileBtn">Save Changes</button>
+      </div>
+      <div class="panel">
+        <h2>Account Snapshot</h2>
+        <div class="list" id="profileSnapshot"></div>
+      </div>
+    </section>
+  </main>
+  <div id="toast"></div>
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/profile.js"></script>
+</body>
+</html>

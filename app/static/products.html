@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudCart | Products</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="/" class="brand">CloudCart</a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a class="active" href="/static/products.html">Products</a>
+        <a href="/static/cart.html">Cart</a>
+        <a href="/static/orders.html">Orders</a>
+        <a href="/static/profile.html">Profile</a>
+        <a href="/static/admin.html">Admin</a>
+      </nav>
+      <span class="auth-chip" id="authChip"></span>
+    </div>
+  </header>
+  <main class="container">
+    <section class="panel" style="margin-top: 20px;">
+      <h2>Product Catalog</h2>
+      <div class="toolbar">
+        <input id="searchInput" placeholder="Search by product name" />
+        <select id="categoryInput"><option value="">All categories</option></select>
+        <select id="sortByInput">
+          <option value="created_at">Newest</option>
+          <option value="price">Price</option>
+          <option value="rating">Rating</option>
+        </select>
+        <select id="sortOrderInput">
+          <option value="desc">High to low</option>
+          <option value="asc">Low to high</option>
+        </select>
+      </div>
+      <div class="row">
+        <button class="btn primary" id="applyFiltersBtn">Apply</button>
+        <button class="btn" id="clearFiltersBtn">Clear</button>
+      </div>
+      <div class="grid-products" id="productsGrid" style="margin-top: 14px;"></div>
+    </section>
+  </main>
+  <div id="toast"></div>
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/products.js"></script>
+</body>
+</html>

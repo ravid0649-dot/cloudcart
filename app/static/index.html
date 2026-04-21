@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudCart | Home</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="/" class="brand">CloudCart</a>
+      <nav class="nav-links">
+        <a class="active" href="/">Home</a>
+        <a href="/static/products.html">Products</a>
+        <a href="/static/cart.html">Cart</a>
+        <a href="/static/orders.html">Orders</a>
+        <a href="/static/profile.html">Profile</a>
+        <a href="/static/admin.html">Admin</a>
+      </nav>
+      <div class="row">
+        <span class="auth-chip" id="authChip"></span>
+        <a class="btn ghost" href="/static/auth.html">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Shop smarter with a cloud-powered marketplace.</h1>
+        <p>
+          Discover trending products, save favorites, track orders live, and manage your profile
+          in one polished shopping experience.
+        </p>
+        <div class="row">
+          <a class="btn primary" href="/static/products.html">Explore Products</a>
+          <a class="btn" href="/static/orders.html">Track Orders</a>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Today Highlights</h2>
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-title">Fast delivery</div>
+            <div class="stat-value">24h</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-title">Customer rating</div>
+            <div class="stat-value">4.8</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-title">Secure checkout</div>
+            <div class="stat-value">100%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="row space-between">
+        <h2>Trending Products</h2>
+        <a href="/static/products.html">See all</a>
+      </div>
+      <div class="grid-products" id="trendingProducts"></div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    CloudCart - Real-world e-commerce platform built with FastAPI and PostgreSQL.
+  </footer>
+  <div id="toast"></div>
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/home.js"></script>
+</body>
+</html>
