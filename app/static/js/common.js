@@ -86,20 +86,24 @@ const CloudCart = (() => {
   }
 
   function productCard(product) {
+    const name = product?.name || "Unnamed product";
+    const category = product?.category || "General";
+    const rating = Number(product?.rating ?? 0).toFixed(1);
+    const description = (product?.description || "No description available.").slice(0, 92);
     const heart = wishlistHas(product.id) ? "♥" : "♡";
     const image = product.image_url
-      ? `<img src="${product.image_url}" alt="${product.name}" />`
+      ? `<img src="${product.image_url}" alt="${name}" />`
       : '<div class="placeholder-thumb">🛍️</div>';
     return `
       <article class="product-card">
         <div class="product-thumb">${image}</div>
         <div class="product-body">
           <div class="row space-between">
-            <strong>${product.name}</strong>
+            <strong>${name}</strong>
             <span class="price">${money(product.price)}</span>
           </div>
-          <div class="product-meta">${product.category} • Rating ${product.rating}</div>
-          <p>${product.description.slice(0, 92)}...</p>
+          <div class="product-meta">${category} • Rating ${rating}</div>
+          <p>${description}...</p>
           <div class="row">
             <button class="btn primary" onclick="CloudCart.addToCart(${product.id})">Add to cart</button>
             <button class="btn ghost" onclick="CloudCart.toggleWishlist(${product.id}); CloudCart.refreshProducts?.()">${heart}</button>
