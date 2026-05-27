@@ -1,0 +1,10 @@
+CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT    MEM %     NET I/O           BLOCK I/O         PIDS
+82f8a1e819e6   api-gateway       0.28%     42.43MiB / 7.75GiB   0.53%     1.61MB / 1.66MB   0B / 180kB        2
+d06a124f6493   product-service   0.23%     33.61MiB / 7.75GiB   0.42%     64.3kB / 72.4kB   0B / 164kB        2
+4d44177b0cad   order-service     0.21%     32.96MiB / 7.75GiB   0.42%     148kB / 844kB     0B / 164kB        2
+89860374c936   cart-service      0.20%     32.84MiB / 7.75GiB   0.41%     140kB / 408kB     0B / 164kB        2
+5ae1eee46f3a   minikube-m03      6.31%     337.6MiB / 3GiB      10.99%    157MB / 7.18MB    123MB / 306MB     177
+74b759941e86   minikube-m02      4.51%     330.2MiB / 3GiB      10.75%    157MB / 7.26MB    113MB / 333MB     176
+1489d333fada   minikube          11.73%    1.134GiB / 3GiB      37.79%    158MB / 31.4MB    610MB / 1.82GB    407
+e226a6a12dbd   app-server        1.02%     561.6MiB / 7.75GiB   7.08%     297MB / 64MB      3.14MB / 5.01GB   99
+fde04135188a   monitor-server    4.22%     1.037GiB / 7.75GiB   13.38%    531MB / 9.65MB    13.5MB / 8.14GB   206
