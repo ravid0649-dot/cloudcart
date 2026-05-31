@@ -2,9 +2,11 @@
 
 echo "Starting CloudCart API load test..."
 
-for i in {1..100}
+for i in {1..150}
 do
   curl -s http://localhost:8000/products > /dev/null
+
+  curl -s http://localhost:8000/products/1 > /dev/null
 
   curl -s -X POST http://localhost:8000/cart \
   -H "Content-Type: application/json" \

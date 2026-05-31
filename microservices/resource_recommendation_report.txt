@@ -1,0 +1,47 @@
+EcoCart-RS: Container Resource Profiling and Right-Sizing Report
+======================================================================
+
+Project: CloudCart E-Commerce Microservices
+Goal: Profile CPU/RAM usage and recommend right-sized container limits.
+
+Container: api-gateway
+--------------------------------------------------
+Average CPU Usage: 5.18%
+Peak CPU Usage: 40.62%
+Average Memory Usage: 43.85 MiB
+Peak Memory Usage: 48.00 MiB
+Recommended CPU Limit: 1.00 CPU
+Recommended Memory Limit: 128 MB
+
+Container: cart-service
+--------------------------------------------------
+Average CPU Usage: 0.50%
+Peak CPU Usage: 2.31%
+Average Memory Usage: 37.11 MiB
+Peak Memory Usage: 37.41 MiB
+Recommended CPU Limit: 0.25 CPU
+Recommended Memory Limit: 128 MB
+
+Container: product-service
+--------------------------------------------------
+Average CPU Usage: 0.44%
+Peak CPU Usage: 1.72%
+Average Memory Usage: 36.24 MiB
+Peak Memory Usage: 36.76 MiB
+Recommended CPU Limit: 0.25 CPU
+Recommended Memory Limit: 128 MB
+
+Container: order-service
+--------------------------------------------------
+Average CPU Usage: 0.48%
+Peak CPU Usage: 2.58%
+Average Memory Usage: 42.87 MiB
+Peak Memory Usage: 43.27 MiB
+Recommended CPU Limit: 0.25 CPU
+Recommended Memory Limit: 128 MB
+
+Explanation:
+The recommendation is based on observed peak CPU and memory usage.
+A safety buffer is added so containers have enough resources during load.
+API Gateway receives slightly higher resources because all requests pass through it.
+Product, Cart, and Order services are lightweight, so they are assigned smaller limits.
